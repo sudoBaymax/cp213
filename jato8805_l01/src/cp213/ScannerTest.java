@@ -38,7 +38,10 @@ public class ScannerTest {
     public static int countTokens(final Scanner source) {
 	int tokens = 0;
 
-	// your code here
+    while (source.hasNext()) {
+    	source.next();
+    	tokens++;
+    }
 
 	return tokens;
     }
@@ -52,7 +55,15 @@ public class ScannerTest {
     public static int readNumbers(final Scanner keyboard) {
 	int total = 0;
 
-	// your code here
+	while (keyboard.hasNext()) {
+		if (keyboard.hasNextInt()) {
+			int currrentInt = keyboard.nextInt();
+			total += currrentInt;
+		}
+		else if (keyboard.hasNext() and keyboard.next == 'q') {
+			
+		}
+	}
 
 	return total;
     }
